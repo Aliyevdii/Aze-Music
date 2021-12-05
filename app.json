@@ -1,0 +1,87 @@
+{
+    "name": "Nexus Musiqi Bot",
+    "description": "pytgcalls ve pyrogram tarafından desteklenen Telegram Grup Görüntülü Sohbet aracılığıyla Video ve Müzik Akışı için Telegram botu",
+    "logo": "https://telegra.ph/file/3837f56009786446c7ac7.jpg",
+    "keywords": [
+        "pytgcalls",
+        "telegram bot",
+        "video stream",
+        "pyrogram"
+    ],
+    "website": "https://t.me/Nexus_Bots",
+    "repository": "https://github.com/Aliyevdii/Aze-Music",
+    "success_url": "https://t.me/dA_l_i_y_e_v_d_i",
+    "env": {
+        "API_ID": {
+            "description": "API_ID'niz my.telegram.org",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "API_HASH'iniz içinm my.telegram.org",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": " Bot Token Girin @BotFather",
+            "required": true
+        },
+        "BOT_USERNAME": {
+            "description": "bot kullanıcı adınız from @BotFather",
+            "required": true
+        },
+        "BOT_NAME": {
+            "description": "bot adınızla doldurun @BotFather",
+            "required": true
+        },
+        "ASSISTANT_NAME": {
+            "description": "asistan kullanıcı adı @-bu olmadan",
+            "required": true
+        },
+        "SESSION_NAME": {
+            "description": "pyrogram String Session ile doldurun",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "sudo üye listesine eklenecek kullanıcı kimliklerinin listesi veya sadece kimliğinizle doldurun",
+            "required": true
+        },
+        "GROUP_SUPPORT": {
+            "description": "grubunuz varsa, grup kullanıcı adını burada doldurun @-bu olmadan",
+            "required": true,
+            "value": "iron_Blood_Gurup"
+        },
+        "UPDATES_CHANNEL": {
+            "description": "kanalınız varsa, kanal kullanıcı adını buraya girmeden doldurun @",
+            "required": true,
+            "value": "Nexus_Bots"
+        },
+        "OWNER_NAME": {
+            "description": "olmadan telgraf hesabı kullanıcı adınızla doldurun @",
+            "required": true,
+            "value": "A_l_i_y_e_v_d_i"
+        },
+        "ALIVE_NAME": {
+            "description": "telgraf hesabınızın takma adı/adıyla doldurun",
+            "required": true,
+            "value": "NEXUS"
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "heroku/nodejs"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
